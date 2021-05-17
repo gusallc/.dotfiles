@@ -348,7 +348,25 @@
     //
     // TERMINAL CONFIG
     //
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "source": "Git Bash",
+        },
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
     // "terminal.integrated.shell.windows": "alacrity",
     "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
     "terminal.integrated.fontSize": 13,
@@ -367,7 +385,6 @@
     //
     "window.openFilesInNewWindow": "off",
     "window.openFoldersInNewWindow": "off",
-    "window.zoomLevel": 0,
     //
     // WORKBENCH CONFIG
     //
