@@ -67,18 +67,19 @@ nnoremap Y y$
 
 
 " -------   Window operation
+" next windows
 nnoremap <Leader>ww <C-W>w
-" delete windows
-nnoremap <Leader>wd <C-W>c
 " move down windows
 nnoremap <Leader>wj <C-W>j
 nnoremap <Leader>wk <C-W>k
-nnoremap <Leader>wh <C-W>h
-nnoremap <Leader>wl <C-W>l
+" init windows
+nnoremap <Leader>wi <C-W>h
+"end windows
+nnoremap <Leader>we <C-W>l
 "split down
-nnoremap <Leader>ws <C-W>s
+nnoremap <Leader>wsd <C-W>s
 "split right
-nnoremap <Leader>wv <C-W>v
+nnoremap <Leader>wsr <C-W>v
 "nnoremap <Leader>w- <C-W>s
 "nnoremap <Leader>w\| <C-W>v
 
