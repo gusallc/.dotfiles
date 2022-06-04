@@ -6,10 +6,32 @@ set ignorecase
 set smartcase
 set showmode
 set number
-" set relativenumber
+set relativenumber
 set scrolloff=3
 set history=100000
 " set clipboard=unnamed
+set idearefactormode=keep "keep mode in action windows for example when modifying the variable it will be in VISUAL MODE
+set ideajoin "enable smart functions for example if(1>2){1} a => if(1>2)1
+"set surround  hace lo que se describe debajo ->
+"It's easiest to explain with examples. Press cs"' inside
+"To go full circle, press cst" to get
+"To remove the delimiters entirely, press ds + "
+"Use with shift + j => join
+set exchange " use with command cx{x|w|c|number} in --- NORMAL MODE ---
+" example: cx[w] -> select from the current cursor to the end of the word
+" example: cx[x] -> select all ne block
+" example: cx[iw] -> select word regardless of the cursor position.
+" example: cx[ib] -> (select everything inside the brackets)
+" example: cx[2w] -> select  2 words on the right
+" example: cx[c] -> unselect in all mode
+" WITH DOTE(.) "EXCHANGE" the words
+" In --- VISUAL MODE ---
+" SELECT AND EXCHANGE is with "X"
+" example: Suppose you are in visual mode and press letter X <shit + x>; everything selected to use "exchange"
+" more info https://github.com/tommcdo/vim-exchange
+set multiple-cursors
+
+
 
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
@@ -64,7 +86,6 @@ nnoremap U <C-r>
 
 " Yank to the end of line
 nnoremap Y y$
-
 
 " -------   Window operation
 " next windows
@@ -181,4 +202,11 @@ nmap <Leader>gc :action GenerateConstructor<CR>
 nmap gB :action SelectAllOccurrences<CR>
 nmap gb :action SelectNextOccurrence<CR>
 vmap gb :action SelectNextOccurrence<CR>
+
+set NERDTree
+"gs -> open file in split windows(right) and close the NERDTree window
+"A -> Zoom (maximize/minimize) the NERDTree window
+"m -> Display the NERDTree menu
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
 
