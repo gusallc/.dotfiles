@@ -5,7 +5,7 @@
 
     // EDITOR CONFIG
     //
-    "editor.fontFamily": "UbuntuMono Nerd Font",
+    "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 15,
     "editor.lineHeight": 0,
     "editor.lineNumbers": "on",
@@ -43,7 +43,7 @@
         },
         //Go to implementation
         {
-            "before": ["leader", "g", "i"],
+            "before": ["g","i"],
             "after": [],
             "commands": [
                 {
@@ -78,7 +78,7 @@
 
         //Select all matches
         {
-            "before": ["leader", "B"],
+            "before": ["g", "B"],
             "after": [],
             "commands": [
                 {
@@ -111,7 +111,7 @@
             ]
         },
 
-        // Re-open tabs
+        // Format document
         {
             "before": ["leader", "f"],
             "after": [],
@@ -146,6 +146,69 @@
                 }
             ]
         },
+
+        //Organize Imports
+        {
+            "before": ["leader", "o","i"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.organizeImports",
+                    "args": []
+                }
+            ]
+        },
+
+        //Rename file
+        {
+            "before": ["leader", "r","f"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "renameFile",
+                    "args": []
+                }
+            ]
+        },
+
+        //Rename element
+        {
+            "before": ["leader", "r","e"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.rename",
+                    "args": []
+                }
+            ]
+        },
+
+        // Reveal in explorer => FILE PATH
+        {
+            "before": ["leader", "f","p"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "revealFileInOS",
+                    "args": []
+                }
+            ]
+        },
+
+        // Reveal in explorer of proyect = file sidebard
+        {
+            "before": ["leader", "f","s"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.files.action.showActiveFileInExplorer",
+                    "args": []
+                }
+            ]
+        },
+
+
+
     ],
     // Option to delegate certain key combinations back to VSCode to be handled natively
     "vim.handleKeys": {
@@ -368,7 +431,7 @@
     },
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     // "terminal.integrated.shell.windows": "alacrity",
-    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
+    "terminal.integrated.fontFamily": "JetBrains Mono",
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.lineHeight": 1.2,
     "terminal.integrated.drawBoldTextInBrightColors": true,
@@ -417,7 +480,8 @@
         "statusBar.background": "#0E7490",
         "statusBar.noFolderBackground": "#0E7490",
         "statusBar.debuggingBackground": "#0E7490",
-        "statusBar.foreground": "#f2f2f2"
+        "statusBar.foreground": "#f2f2f2",
+        "statusBar.debuggingForeground": "#f2f2f2"
     },
     "window.titleBarStyle": "custom",
     // "files.autoSave": "off",
@@ -492,4 +556,7 @@
     "tabnine.experimentalAutoImports": true,
     "workbench.iconTheme": "material-icon-theme",
     "kite.showWelcomeNotificationOnStartup": false,
+    "editor.fontLigatures": true,
+    "java.home": "C:\\Program Files\\Java\\java-11-openjdk-11.0.12.7",
+    "maven.executable.path": "d:\\Gustavo\\tools\\apache-maven-3.8.3\\bin\\mvn.cmd",
 }
