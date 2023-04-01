@@ -13,9 +13,12 @@ nmap H ^
 " Move to the end of line
 nmap L $
 
-" Have j and k navigate visual lines rather than logical ones
+" Have j and k navigate visual lines rather than logical ones - normal mode
 nmap j gj
 nmap k gk
+" Have j and k navigate visual lines rather than logical ones - visual mode
+vmap j gj
+vmap k gk
 
 nmap <C-n> :findAndSelectNextInclusive
 
